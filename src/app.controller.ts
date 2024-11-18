@@ -12,7 +12,7 @@ export class BookingsController {
     return this.bookService.getAllBooking();
   }
 
-  @Get('getById:id')
+  @Get('getById/:id')
   getBookById(@Param('id') id: string): Book | undefined {
     const bookID = +id;
     return this.bookService.findById(bookID); 
